@@ -1,6 +1,6 @@
 # Modal Maker
 
-===Elementor Modal Popup Widget ===
+===Elementor Modal Maker Widget ===
 Contributor: souravd000
 Tags: elementor, modal, popup, widget
 Requires at least: 5.0
