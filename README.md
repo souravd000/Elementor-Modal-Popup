@@ -4,7 +4,7 @@
 Contributor: souravd000
 Tags: elementor, modal, popup, widget
 Requires at least: 5.0
-Tested up to: 6.2
+Tested up to: 6.6
 Stable tag: 1.0
 Requires PHP: 7.0
 License: GPLv2 or later
