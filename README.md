@@ -1,4 +1,4 @@
-# Elementor-Modal-Popup
+# Modal Maker
 
 ===Elementor Modal Popup Widget ===
 Contributor: souravd000
