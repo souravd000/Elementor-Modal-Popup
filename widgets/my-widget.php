@@ -7,12 +7,12 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 
     // Return the name of your widget.
     public function get_name() {
-        return 'Modal Popup';
+        return 'modal-maker';
     }
 
     // Return the title of your widget.
     public function get_title() {
-        return __( 'Modal Popup', 'my-elementor-widget' );
+        return __( 'Modal Maker', 'modal-maker' );
     }
 
     // Return the icon of your widget.
@@ -30,7 +30,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'my-elementor-widget' ),
+                'label' => __( 'Content', 'modal-maker' ),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -39,9 +39,9 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'button_text',
             [
-                'label' => __( 'Button Text', 'my-elementor-widget' ),
+                'label' => __( 'Button Text', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'Open Modal', 'my-elementor-widget' ),
+                'default' => __( 'Open Modal', 'modal-maker' ),
             ]
         );
 
@@ -49,12 +49,12 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'modal_content_type',
             [
-                'label' => __( 'Content Type', 'my-elementor-widget' ),
+                'label' => __( 'Content Type', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'default' => 'button_group',
                 'options' => [
-                    'button_group' => __( 'Button Group', 'my-elementor-widget' ),
-                    'text_editor' => __( 'Text Editor', 'my-elementor-widget' ),
+                    'button_group' => __( 'Button Group', 'modal-maker' ),
+                    'text_editor' => __( 'Text Editor', 'modal-maker' ),
                 ],
             ]
         );
@@ -63,9 +63,9 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'modal_title',
             [
-                'label' => __( 'Modal Title', 'my-elementor-widget' ),
+                'label' => __( 'Modal Title', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'Modal Title', 'my-elementor-widget' ),
+                'default' => __( 'Modal Title', 'modal-maker' ),
             ]
         );
 
@@ -73,7 +73,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'modal_title_typography',
-                'label' => __( 'Title Typography', 'my-elementor-widget' ),
+                'label' => __( 'Title Typography', 'modal-maker' ),
                 'selector' => '{{WRAPPER}} .my-modal-header h2',
             ]
         );
@@ -81,7 +81,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'modal_title_color',
             [
-                'label' => __( 'Title Color', 'my-elementor-widget' ),
+                'label' => __( 'Title Color', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .my-modal-header h2' => 'color: {{VALUE}};',
@@ -94,19 +94,19 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_alignment',
             [
-                'label' => __( 'Button Alignment', 'my-elementor-widget' ),
+                'label' => __( 'Button Alignment', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __( 'Left', 'my-elementor-widget' ),
+                        'title' => __( 'Left', 'modal-maker' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'my-elementor-widget' ),
+                        'title' => __( 'Center', 'modal-maker' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'my-elementor-widget' ),
+                        'title' => __( 'Right', 'modal-maker' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
@@ -146,13 +146,13 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'modal_size',
             [
-                'label' => __( 'Modal Size', 'my-elementor-widget' ),
+                'label' => __( 'Modal Size', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'default' => 'medium',
                 'options' => [
-                    'small' => __( 'Small', 'my-elementor-widget' ),
-                    'medium' => __( 'Medium', 'my-elementor-widget' ),
-                    'large' => __( 'Large', 'my-elementor-widget' ),
+                    'small' => __( 'Small', 'modal-maker' ),
+                    'medium' => __( 'Medium', 'modal-maker' ),
+                    'large' => __( 'Large', 'modal-maker' ),
                 ],
             ]
         );
@@ -163,7 +163,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'item_section',
             [
-                'label' => __( 'Item', 'my-elementor-widget' ),
+                'label' => __( 'Item', 'modal-maker' ),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -173,21 +173,21 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'button_group',
             [
-                'label' => __( 'Button Group', 'my-elementor-widget' ),
+                'label' => __( 'Button Group', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => [
                     [
                         'name' => 'button_group_text',
-                        'label' => __( 'Button Text', 'my-elementor-widget' ),
+                        'label' => __( 'Button Text', 'modal-maker' ),
                         'type' => \Elementor\Controls_Manager::TEXT,
-                        'default' => __( 'Button', 'my-elementor-widget' ),
+                        'default' => __( 'Button', 'modal-maker' ),
                     ],
                     // URL field for each button
                     [
                         'name' => 'button_group_url',
-                        'label' => __( 'URL', 'my-elementor-widget' ),
+                        'label' => __( 'URL', 'modal-maker' ),
                         'type' => \Elementor\Controls_Manager::URL,
-                        'placeholder' => __( 'https://your-link.com', 'my-elementor-widget' ),
+                        'placeholder' => __( 'https://your-link.com', 'modal-maker' ),
                         'default' => [
                             'url' => '',
                             'is_external' => false,
@@ -206,19 +206,19 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_group_alignment',
             [
-                'label' => __( 'Button Group Alignment', 'my-elementor-widget' ),
+                'label' => __( 'Button Group Alignment', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __( 'Left', 'my-elementor-widget' ),
+                        'title' => __( 'Left', 'modal-maker' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'my-elementor-widget' ),
+                        'title' => __( 'Center', 'modal-maker' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'my-elementor-widget' ),
+                        'title' => __( 'Right', 'modal-maker' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
@@ -237,9 +237,9 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'modal_text_editor',
             [
-                'label' => __( 'Text Editor', 'my-elementor-widget' ),
+                'label' => __( 'Text Editor', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::WYSIWYG,
-                'default' => __( 'This is the default text.', 'my-elementor-widget' ),
+                'default' => __( 'This is the default text.', 'modal-maker' ),
                 'condition' => [
                     'modal_content_type' => 'text_editor',
                 ],
@@ -251,7 +251,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'text_editor_typography',
-                'label' => __( 'Text Editor Typography', 'my-elementor-widget' ),
+                'label' => __( 'Text Editor Typography', 'modal-maker' ),
                 'selector' => '{{WRAPPER}} .my-modal-editor-content',
                 'condition' => [
                     'modal_content_type' => 'text_editor',
@@ -262,7 +262,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'text_editor_color',
             [
-                'label' => __( 'Text Editor Color', 'my-elementor-widget' ),
+                'label' => __( 'Text Editor Color', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .my-modal-editor-content' => 'color: {{VALUE}};',
@@ -281,7 +281,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'Button Styles', 'my-elementor-widget' ),
+                'label' => __( 'Button Styles', 'modal-maker' ),
                 'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
@@ -291,7 +291,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'button_text_color',
             [
-                'label' => __( 'Button Text Color', 'my-elementor-widget' ),
+                'label' => __( 'Button Text Color', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .my-modal-trigger' => 'color: {{VALUE}};',
@@ -303,7 +303,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'button_background_color',
             [
-                'label' => __( 'Button Background Color', 'my-elementor-widget' ),
+                'label' => __( 'Button Background Color', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .my-modal-trigger' => 'background-color: {{VALUE}};',
@@ -315,7 +315,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_border_radius',
             [
-                'label' => __( 'Border Radius', 'my-elementor-widget' ),
+                'label' => __( 'Border Radius', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
@@ -329,7 +329,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
                 'name' => 'button_box_shadow',
-                'label' => __( 'Button Box Shadow', 'my-elementor-widget' ),
+                'label' => __( 'Button Box Shadow', 'modal-maker' ),
                 'selector' => '{{WRAPPER}} .my-modal-trigger',
             ]
         );
@@ -341,7 +341,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'button_typography',
-                'label' => __( 'Typography', 'my-elementor-widget' ),
+                'label' => __( 'Typography', 'modal-maker' ),
                 'selector' => '{{WRAPPER}} .my-modal-trigger',
             ]
         );
@@ -351,7 +351,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'button_border',
-                'label' => __( 'Button Border', 'my-elementor-widget' ),
+                'label' => __( 'Button Border', 'modal-maker' ),
                 'selector' => '{{WRAPPER}} .my-modal-trigger',
             ]
         );
@@ -360,7 +360,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_padding',
             [
-                'label' => __( 'Button Padding', 'my-elementor-widget' ),
+                'label' => __( 'Button Padding', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -385,11 +385,11 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 
         echo '<div class="my-modal-trigger-wrapper">';
         echo '<button class="my-modal-trigger">';
-
-        echo ' ' . $settings['button_text'];
+        echo esc_html( $settings['button_text'] );
         echo '</button>';
         echo '</div>';
 
+        $modal_size_class = 'my-modal-' . esc_attr( $settings['modal_size'] );
         echo '<div id="my-modal" class="my-modal ' . esc_attr($modal_size_class) . '">';
         echo '<div class="my-modal-content">';
         // Create header section with Flexbox alignment
@@ -412,17 +412,19 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 
                 // If a URL is set for the button, add the link attributes
                 if ( ! empty( $button['button_group_url']['url'] ) ) {
-                    $link_attributes = ' href="' . esc_url( $button['button_group_url']['url'] ) . '"';
-                    if ( $button['button_group_url']['is_external'] ) {
+                    $link_attributes .= ' href="' . esc_url( $button['button_group_url']['url'] ) . '"';
+                    // Escape target attribute if it's set
+                    if ( ! empty( $button['button_group_url']['is_external'] ) && $button['button_group_url']['is_external'] ) {
                         $link_attributes .= ' target="_blank"';
                     }
-                    if ( $button['button_group_url']['nofollow'] ) {
+                    // Escape rel attribute if nofollow is set
+                    if ( ! empty( $button['button_group_url']['nofollow'] ) && $button['button_group_url']['nofollow'] ) {
                         $link_attributes .= ' rel="nofollow"';
                     }
                 }
 
                 echo '<a' . $link_attributes . ' class="my-group-button">';
-                echo ' ' . $button['button_group_text'];
+                echo esc_html( $button['button_group_text'] );
                 echo '</a>';
             }
             echo '</div>'; // End Button Group
@@ -430,7 +432,8 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         } elseif ( $settings['modal_content_type'] === 'text_editor' ) {
             echo '<div class="my-item-section">';
             echo '<div class="my-modal-editor-content">';
-            echo $settings['modal_text_editor'];
+            // Use wp_kses_post() to allow safe HTML output for text editor content
+            echo wp_kses_post( $settings['modal_text_editor'] );
             echo '</div>';
             echo '</div>';
         }
