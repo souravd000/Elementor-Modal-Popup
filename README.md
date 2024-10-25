@@ -12,8 +12,6 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-== Description ==
-
 Modal Popup is an Elementor plugin maintained by the souravd000 that add modal in Elementor. Users can easily add customizable modals to their pages.
 
 At a glance, this plugin adds the following:
