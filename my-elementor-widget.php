@@ -1,12 +1,16 @@
 <?php
 /**
- * Plugin Name: Modal Popup
- * Description: A simple custom Elementor widget for adding a modal popup.
+ * Plugin Name: Modal Maker
+ * Plugin URI: https://github.com/souravd000/modal-maker
+ * Description: Create customizable modal popups in Elementor with ease, featuring flexible content options like button groups or rich text editors.
  * Version: 1.0
  * Author: souravd000
  * License: GPL v2 or later
- * Text Domain: modal-popup-widget
+ * Text Domain: modal-maker  // <-- Make sure this is 'modal-maker'
  */
+
+// Define plugin version
+define( 'MODAL_MAKER_VERSION', '1.0' );
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
@@ -14,11 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Enqueue necessary scripts and styles
 function my_custom_widget_scripts() {
-    wp_enqueue_script( 'jquery' );
-    wp_enqueue_style( 'my-modal-style', plugins_url( '/assets/css/my-modal-style.css', __FILE__ ) );
-    wp_enqueue_script( 'my-modal-script', plugins_url( '/assets/js/my-modal-script.js', __FILE__ ), [ 'jquery' ], false, true );
+    // Use MODAL_MAKER_VERSION to ensure correct versioning
+    wp_enqueue_style( 'my-modal-style', plugins_url( '/assets/css/my-modal-style.css', __FILE__ ), [], MODAL_MAKER_VERSION );
+    wp_enqueue_script( 'my-modal-script', plugins_url( '/assets/js/my-modal-script.js', __FILE__ ), [ 'jquery' ], MODAL_MAKER_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_widget_scripts' );
+
 
 // Load the custom widget class.
 function my_custom_widget_init() {
