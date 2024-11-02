@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-class My_Custom_Widget extends \Elementor\Widget_Base {
+class MM_Widget extends \Elementor\Widget_Base {
 
     // Return the name of your widget.
     public function get_name() {
@@ -122,7 +122,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'button_width',
             [
-                'label' => __( 'Button Width', 'plugin-name' ),
+                'label' => __( 'Button Width', 'modal-maker' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ '%', 'px' ],
                 'range' => [
@@ -408,25 +408,22 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
             
 
             foreach ( $settings['button_group'] as $button ) {
-                $link_attributes = '';
-
-                // If a URL is set for the button, add the link attributes
                 if ( ! empty( $button['button_group_url']['url'] ) ) {
-                    $link_attributes .= ' href="' . esc_url( $button['button_group_url']['url'] ) . '"';
-                    // Escape target attribute if it's set
-                    if ( ! empty( $button['button_group_url']['is_external'] ) && $button['button_group_url']['is_external'] ) {
-                        $link_attributes .= ' target="_blank"';
-                    }
-                    // Escape rel attribute if nofollow is set
-                    if ( ! empty( $button['button_group_url']['nofollow'] ) && $button['button_group_url']['nofollow'] ) {
-                        $link_attributes .= ' rel="nofollow"';
-                    }
+                    $link_url = esc_url( $button['button_group_url']['url'] );
+                    $link_target = $button['button_group_url']['is_external'] ? ' target="_blank"' : '';
+                    $link_nofollow = $button['button_group_url']['nofollow'] ? ' rel="nofollow"' : '';
+                    
+                    // Print the anchor tag with each attribute escaped
+                    printf(
+                        '<a href="%s"%s%s class="my-group-button">%s</a>',
+                        esc_url( $link_url ),
+                        esc_attr( $link_target ),
+                        esc_attr( $link_nofollow ),
+                        esc_html( $button['button_group_text'] )
+                    );
                 }
-
-                echo '<a' . $link_attributes . ' class="my-group-button">';
-                echo esc_html( $button['button_group_text'] );
-                echo '</a>';
             }
+            
             echo '</div>'; // End Button Group
             echo '</div>'; // End Item Section
         } elseif ( $settings['modal_content_type'] === 'text_editor' ) {
@@ -444,4 +441,4 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 }
 
 // Register the widget.
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \My_Custom_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \MM_Widget() );
