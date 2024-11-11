@@ -1,13 +1,14 @@
 jQuery(document).ready(function($) {
-    // Open the modal when the button is clicked
+    // Open the specific modal when the associated button is clicked
     $('.my-modal-trigger').on('click', function() {
-        $('#my-modal').fadeIn();
+        var modalId = $(this).data('modal');
+        $(modalId).fadeIn();
     });
 
-    // Close the modal when the close button or outside the modal is clicked
-    $('.my-modal-close, .my-modal').on('click', function(e) {
-        if (e.target === this) {
-            $('#my-modal').fadeOut();
+    // Close the modal when the close button or outside the modal content is clicked
+    $('.my-modal').on('click', function(e) {
+        if ($(e.target).is('.my-modal, .my-modal-close')) {
+            $(this).fadeOut();
         }
     });
 });
