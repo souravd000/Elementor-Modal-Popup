@@ -1,17 +1,6 @@
-=== Modal Maker ===
-Text Domain: modal-maker
-Contributors: souravd000
-Tags: elementor, modal, popup, widget
-Requires at least: 5.0
-Tested up to: 6.6
-Stable tag: 1.3
-Requires PHP: 7.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
 An Elementor widget plugin which adds a customizable button that triggers a modal popup, perfect for displaying additional content or options in a stylish overlay. The modal can show either a group of buttons, each linked to a URL, or a rich text editor for versatile content. Controls are available for setting the button’s color, typography, padding, and border styling, as well as options for modal sizing. Each widget instance functions independently, allowing multiple modals on a single page without overlap. This plugin is ideal for creating popups with unique content, enhancing user interaction and design flexibility
 
-== Description ==
+**Description**
 
 
 This **Modal Maker Plugin** enhances your website’s interactivity by allowing you to add a fully customizable button that triggers a modal popup. Perfect for displaying additional content, product links, or call-to-action options, this plugin integrates seamlessly with Elementor and provides complete control over modal appearance and content type.
@@ -51,7 +40,7 @@ This plugin requires **Elementor** to be installed and activated on your WordPre
 
 With its clean design and full-featured controls, this Elementor Modal Popup Widget Plugin provides a highly adaptable solution for enhancing user engagement, promoting products, and driving conversions. Whether you need a simple informational popup or a detailed product showcase, this plugin offers the versatility to make your content pop.
 
-== Installation ==
+**Installation**
 
 Note : This plugin works with Elementor. Make sure you have [Elementor](https://wordpress.org/plugins/elementor/) installed.
 
@@ -60,17 +49,7 @@ Note : This plugin works with Elementor. Make sure you have [Elementor](https://
 3. Find the modal maker widget in the general section of elementor editor.
 3. Use the Elementor editor to add the modal widget to your page.
 
-== Screenshots ==
-
-1. You can find the widget under general category in elementor editor.
-2. Configure the buttons independently.
-3. Select what type of content you want on the modal.
-4. Add multiple buttons in the modal.
-5. Edit and style text content in the text editor.
-6. Add styles to individual buttons.
-
-
-== Frequently Asked Questions ==
+**Frequently Asked Questions**
 
 = 1. Can I add multiple modal widgets to the same page without them interfering with each other? =
 
