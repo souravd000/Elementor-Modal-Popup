@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-class MM_Widget extends \Elementor\Widget_Base {
+class ModalM_Widget extends \Elementor\Widget_Base {
 
     // Return the name of your widget.
     public function get_name() {
@@ -379,18 +379,20 @@ class MM_Widget extends \Elementor\Widget_Base {
     // Render the widget output on the frontend.
     protected function render() {
         $settings = $this->get_settings_for_display();
+        $unique_id = $this->get_id();
 
         // Add size class based on user selection
         $modal_size_class = 'my-modal-' . $settings['modal_size'];
 
         echo '<div class="my-modal-trigger-wrapper">';
-        echo '<button class="my-modal-trigger">';
+        echo '<button class="my-modal-trigger" data-modal="#my-modal-' . esc_attr( $unique_id ) . '">';
         echo esc_html( $settings['button_text'] );
         echo '</button>';
         echo '</div>';
 
         $modal_size_class = 'my-modal-' . esc_attr( $settings['modal_size'] );
-        echo '<div id="my-modal" class="my-modal ' . esc_attr($modal_size_class) . '">';
+        //echo '<div id="my-modal" class="my-modal ' . esc_attr($modal_size_class) . '">';
+        echo '<div id="my-modal-' . esc_attr( $unique_id ) . '" class="my-modal ' . esc_attr( $modal_size_class ) . '">';
         echo '<div class="my-modal-content">';
         // Create header section with Flexbox alignment
         echo '<div class="my-modal-header">';
@@ -441,4 +443,4 @@ class MM_Widget extends \Elementor\Widget_Base {
 }
 
 // Register the widget.
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \MM_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \ModalM_Widget() );
